@@ -324,7 +324,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-override={overrides.button}
                   className={classNames("__wab_instance", sty.button)}
                   color={"white"}
-                  link={"BUY $MOM"}
+                  link={
+                    "https://dexscreener.com/solana/8s5bxjaccgugq8oshsi3ysjyz7lwhgpytrimumpjwiee"
+                  }
                 >
                   <div
                     data-plasmic-name={"text"}
