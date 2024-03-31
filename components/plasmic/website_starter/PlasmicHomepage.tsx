@@ -67,6 +67,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: n66mgiyBB4oUW2nnpuYokY/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: qh1sVML5jZD6/css
 
+import TwittersvgIcon from "./icons/PlasmicIcon__Twittersvg"; // plasmic-import: vOaFUAc8gebh/icon
+import TelegramsvgIcon from "./icons/PlasmicIcon__Telegramsvg"; // plasmic-import: mMQ5uZLhICgc/icon
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: Jfs-A4quqolB/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: j7wTMK3Y0fHv/icon
 
@@ -86,12 +88,10 @@ export type PlasmicHomepage__OverridesType = {
   embedHtml?: Flex__<typeof Embed>;
   h1?: Flex__<"h1">;
   h3?: Flex__<"h3">;
-  freeBox?: Flex__<"div">;
   columns?: Flex__<"div">;
   h2?: Flex__<"h2">;
   button?: Flex__<typeof Button>;
   text?: Flex__<"div">;
-  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -129,7 +129,20 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -192,6 +205,42 @@ function PlasmicHomepage__RenderFunc(props: {
             >
               {"Meme of Moonboys"}
             </h1>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__qPwIh)}
+            >
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link___48Voe
+                )}
+                component={Link}
+                href={"https://twitter.com/MemeforMoonboys"}
+                platform={"nextjs"}
+              >
+                <TwittersvgIcon
+                  className={classNames(projectcss.all, sty.svg__rrAby)}
+                  role={"img"}
+                />
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__p0JcV
+                )}
+                component={Link}
+                href={"https://t.me/MemeforMoonboys"}
+                platform={"nextjs"}
+              >
+                <TelegramsvgIcon
+                  className={classNames(projectcss.all, sty.svg__b5Rbo)}
+                  role={"img"}
+                />
+              </PlasmicLink__>
+            </Stack__>
             <h3
               data-plasmic-name={"h3"}
               data-plasmic-override={overrides.h3}
@@ -206,11 +255,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 "Community of Moonboys is a vibrant and enthusiastic memecoin community deicated to reaching new heights together but, wen lambo sir?"
               }
             </h3>
-            <div
-              data-plasmic-name={"freeBox"}
-              data-plasmic-override={overrides.freeBox}
-              className={classNames(projectcss.all, sty.freeBox)}
-            >
+            <div className={classNames(projectcss.all, sty.freeBox__rxXm3)}>
               <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__lHru0)}
@@ -271,7 +316,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "Tokenomics\nAn original total supply of 1B tokens\nBuy and Sell Tax is 0%\nLP tokens are burnt, and contract ownership is renounced.\nContract : 7Ut2U743GH911oxpdGQv2TE8TyjaUjYX87HuQpTwimxR"
+                    "Tokenomics\nAn original total supply of 1B tokens\nBuy and Sell Tax is 0%\nLP tokens are burnt, and contract ownership is renounced.\nContract :  BhHAgbTjDj2gGzirg42B4Uqn\ntS2S4LfZQZZD4rhHx2DS"
                   }
                 </h2>
                 <Button
@@ -298,10 +343,13 @@ function PlasmicHomepage__RenderFunc(props: {
           </section>
           <section className={classNames(projectcss.all, sty.section__axW2D)}>
             <PlasmicLink__
-              data-plasmic-name={"link"}
-              data-plasmic-override={overrides.link}
-              className={classNames(projectcss.all, projectcss.a, sty.link)}
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link__b5Syp
+              )}
               component={Link}
+              href={"https://t.me/MemeforMoonboys"}
               platform={"nextjs"}
             >
               <PlasmicImg__
@@ -322,6 +370,42 @@ function PlasmicHomepage__RenderFunc(props: {
                 }}
               />
             </PlasmicLink__>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__kzpv1)}
+            >
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__vIa6Z
+                )}
+                component={Link}
+                href={"https://twitter.com/MemeforMoonboys"}
+                platform={"nextjs"}
+              >
+                <TwittersvgIcon
+                  className={classNames(projectcss.all, sty.svg__bPBi7)}
+                  role={"img"}
+                />
+              </PlasmicLink__>
+              <PlasmicLink__
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.link__kw5U
+                )}
+                component={Link}
+                href={"https://t.me/MemeforMoonboys"}
+                platform={"nextjs"}
+              >
+                <TelegramsvgIcon
+                  className={classNames(projectcss.all, sty.svg__jOtKa)}
+                  role={"img"}
+                />
+              </PlasmicLink__>
+            </Stack__>
           </section>
         </div>
       </div>
@@ -330,27 +414,14 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "embedHtml",
-    "h1",
-    "h3",
-    "freeBox",
-    "columns",
-    "h2",
-    "button",
-    "text",
-    "link"
-  ],
+  root: ["root", "embedHtml", "h1", "h3", "columns", "h2", "button", "text"],
   embedHtml: ["embedHtml"],
   h1: ["h1"],
   h3: ["h3"],
-  freeBox: ["freeBox"],
   columns: ["columns", "h2", "button", "text"],
   h2: ["h2"],
   button: ["button", "text"],
-  text: ["text"],
-  link: ["link"]
+  text: ["text"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -360,12 +431,10 @@ type NodeDefaultElementType = {
   embedHtml: typeof Embed;
   h1: "h1";
   h3: "h3";
-  freeBox: "div";
   columns: "div";
   h2: "h2";
   button: typeof Button;
   text: "div";
-  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -431,12 +500,10 @@ export const PlasmicHomepage = Object.assign(
     embedHtml: makeNodeComponent("embedHtml"),
     h1: makeNodeComponent("h1"),
     h3: makeNodeComponent("h3"),
-    freeBox: makeNodeComponent("freeBox"),
     columns: makeNodeComponent("columns"),
     h2: makeNodeComponent("h2"),
     button: makeNodeComponent("button"),
     text: makeNodeComponent("text"),
-    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
@@ -444,7 +511,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "Meme of Moonboys",
       description: "",
       ogImageSrc: "",
       canonical: ""

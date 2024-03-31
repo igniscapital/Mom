@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -77,7 +77,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "n66mgiyBB4oUW2nnpuYokY",
@@ -125,6 +126,16 @@
           "id": "j7wTMK3Y0fHv",
           "name": "IconIcon",
           "moduleFilePath": "plasmic/website_starter/icons/PlasmicIcon__Icon.tsx"
+        },
+        {
+          "id": "vOaFUAc8gebh",
+          "name": "TwittersvgIcon",
+          "moduleFilePath": "plasmic/website_starter/icons/PlasmicIcon__Twittersvg.tsx"
+        },
+        {
+          "id": "mMQ5uZLhICgc",
+          "name": "TelegramsvgIcon",
+          "moduleFilePath": "plasmic/website_starter/icons/PlasmicIcon__Telegramsvg.tsx"
         }
       ],
       "images": [
